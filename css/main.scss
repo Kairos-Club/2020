@@ -351,33 +351,43 @@ code {
   //transition: transform 1s ease-out;
 
   filter: drop-shadow(0 0 5px rgba(83, 61, 28, 0.3));
+
+
+
+  img {
+    width: 100%;
+  }
 }
 
 .figure1 {
-  width: 80%;
-  height: 80%;
-  bottom: 10%;
+  width: 200px;
+  top: 30%;
   left: 10%;
+
+  outline: 1px solid red;
 }
 
 .figure2 {
-  width: 70%;
-  height: 60%;
-  bottom: 0%;
-  left: 15%;
+  width: 200px;
+  top: 40%;
+  left: 25%;
+
+  outline: 1px solid blue;
 }
 
 .figure3 {
-  width: 40%;
-  height: 30%;
+  width: 200px;
   top: 7%;
-  right: 5%;
+  left: 50%;
+
+  outline: 1px solid green;
 }
 .figure4 {
-  width: 20%;
-  height: 20%;
+  width: 200px;
   top: 40%;
-  left: 40%;
+  left: 60%;
+
+  outline: 1px solid gold;
 }
 
 .parallax-layer.is-out {
