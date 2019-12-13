@@ -348,7 +348,7 @@ code {
   backface-visibility: hidden;
   position: absolute;
   display: block;
-  transition: transform .1s ease-out;
+  //transition: transform 1s ease-out;
 
   background-color: darkgoldenrod;
   border-radius: 3px;
