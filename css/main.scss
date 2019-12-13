@@ -350,10 +350,7 @@ code {
   display: block;
   //transition: transform 1s ease-out;
 
-  background-color: darkgoldenrod;
-  border-radius: 3px;
-
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(0 0 5px rgba(83, 61, 28, 0.3));
 }
 
 .figure1 {
