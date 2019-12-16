@@ -80,63 +80,15 @@ if(!isMobile) {
 
 
 
-(function() {
-    'use strict';
 
-    var inDrag = false
-        , dragElement = null
-        , dragOffsetX = 0
-        , dragOffsetY = 0
-        , body = document.getElementsByTagName('body')[0];
-    ;
 
-    function dragHandler( event ) {
-        if (event.button != 0) return;
-        dragElement = event.target;
-        var canDrag = dragElement.getAttribute('drag')
-        ;
-        while (!canDrag && dragElement.parentElement) {
-            dragElement = dragElement.parentElement;
-            canDrag = dragElement.getAttribute('drag');
-        }
-        if (!canDrag) return dragElement = false;
-        dragOffsetX = event.clientX - dragElement.offsetLeft;
-        dragOffsetY = event.clientY - dragElement.offsetTop;
-        body.appendChild(dragElement);
-        body.style.userSelect = 'none';
-        inDrag = true;
-    }
 
-    function dragMove( event ) {
-        if (!inDrag) return false;
-        dragElement.style.left = event.clientX-dragOffsetX+'.px';
-        dragElement.style.top = event.clientY-dragOffsetY+'.px';
-    }
 
-    function dragStop() {
-        if (!inDrag) return;
-        if (event.button != 0) return;
-        inDrag = false;
-        if ( (dragElement.offsetTop + dragElement.offsetHeight)<20) dragElement.style.top = 20 - dragElement.offsetHeight+'.px';
-        if ( (dragElement.offsetLeft + dragElement.offsetWidth)<20) dragElement.style.left = 20 - dragElement.offsetWidth+'.px';
-        if ( (dragElement.offsetTop+20)>window.innerHeight) dragElement.style.top = window.innerHeight - 20+'.px';
-        if ( (dragElement.offsetLeft+20)>window.innerWidth) dragElement.style.left = window.innerWidth - 20+'.px';
-        dragElement.zIndex = '10';
-        body.style.userSelect = '';
-        dragElement = null;
-    }
+$('.pep').pep({
+    useCSSTranslation: false,
+    constrainTo: 'window'
+})
 
-    function init() {
-        var dragableItems = document.querySelectorAll('[drag]')
-        ;
-        for (let itemID=0; itemID<dragableItems.length; itemID++) {
-            let item = dragableItems[itemID];
-            item.className+=' dragable';
-        }
-        window.addEventListener('mousedown', dragHandler );
-        window.addEventListener('mouseup', dragStop );
-        window.addEventListener('mousemove', dragMove );
-    }
-
-    window.addEventListener('load', init);
-})();
+$('button').on('click', function(){
+    $pep.data('plugin_pep').revert()
+});

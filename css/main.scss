@@ -412,6 +412,9 @@ code {
 }
 
 
+
+
+
 .sub-content {
 
   position: absolute;
@@ -431,12 +434,19 @@ code {
 
 
 .icon {
+  z-index: 9;
+  //animation:rball 3s infinite ease-in-out;
   font-size: 150px
 }
-.dragable {
-  position: fixed;
-  top: 40%;
-  left: 45%;
-  cursor: move;
-  z-index: 10;
+
+
+
+@-webkit-keyframes rball{
+  0%,100%{
+    transform: scale(1)
+  }
+  50%{
+    transform: scale(1.1)
+  }
 }
+
