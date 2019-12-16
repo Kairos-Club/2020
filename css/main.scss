@@ -319,12 +319,12 @@ code {
 
 
 #parallax-container {
-  background-color: white;
-  position: absolute;
-  z-index: 0;
+  //background-color: #CCC;
+  position: relative;
+  z-index: 3;
   top: 0;
   left: 0;
-  overflow: hidden;
+  //overflow: hidden;
   width: 100vw;
   height: 100vh;
   backface-visibility: hidden;
@@ -350,13 +350,26 @@ code {
   display: block;
   //transition: transform 1s ease-out;
 
-  filter: drop-shadow(0 0 2px rgba(83, 61, 28, 0.3));
+  //filter: blur(1px) contrast(2);
 
+  transition: filter .3s ease-in-out, transform 1s ease-out;
+
+  &:hover {
+    //filter: blur(0px) contrast(2);
+
+    transition: none;
+
+    img {
+      //transform: scale(2)
+    }
+  }
 
 
   img {
+    transition: transform .3s ease-in-out;
     width: 80%;
     max-width: 150px;
+    transform: scale(1)
   }
 }
 
@@ -396,4 +409,34 @@ code {
 .parallax-layer.is-out {
   transform: translate3d(0, 0, 0) !important;
   transition: transform 2s ease-out;
+}
+
+
+.sub-content {
+
+  position: absolute;
+  width: 100%;
+
+  //padding: 0 1em;
+  color: black;
+  background-color: red;
+
+  p {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+
+
+
+.icon {
+  font-size: 150px
+}
+.dragable {
+  position: fixed;
+  top: 40%;
+  left: 45%;
+  cursor: move;
+  z-index: 10;
 }
