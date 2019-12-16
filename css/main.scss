@@ -350,44 +350,47 @@ code {
   display: block;
   //transition: transform 1s ease-out;
 
-  filter: drop-shadow(0 0 5px rgba(83, 61, 28, 0.3));
+  filter: drop-shadow(0 0 2px rgba(83, 61, 28, 0.3));
 
 
 
   img {
-    width: 100%;
+    width: 80%;
+    max-width: 150px;
   }
 }
 
-.figure1 {
-  width: 200px;
-  top: 30%;
-  left: 10%;
+.figure1,
+.figure2,
+.figure3,
+.figure4 {
+  width: 50vw;
+  height: 50vh;
+  line-height: 50vh;
+  text-align: center;
+}
 
-  outline: 1px solid red;
+.figure1 {
+  top: 0;
+  left: 0;
+  //outline: 1px solid red;
 }
 
 .figure2 {
-  width: 200px;
-  top: 40%;
-  left: 25%;
-
-  outline: 1px solid blue;
+  top: 0;
+  left: 50vw;
+  //outline: 1px solid blue;
 }
 
 .figure3 {
-  width: 200px;
-  top: 7%;
-  left: 50%;
-
-  outline: 1px solid green;
+  bottom: 0;
+  left: 0;
+  //outline: 1px solid green;
 }
 .figure4 {
-  width: 200px;
-  top: 40%;
-  left: 60%;
-
-  outline: 1px solid gold;
+  bottom: 0;
+  left: 50vw;
+  //outline: 1px solid gold;
 }
 
 .parallax-layer.is-out {
