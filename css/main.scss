@@ -461,6 +461,24 @@ code {
   //outline: 4px solid red;
 }
 
+.d-2020  {
+  position: fixed;
+
+  top: 10%;
+  left: 10%;
+
+  width: 80%;
+
+  height: 80%;
+  max-height: 600px;
+
+  background: url('/img/2020.png') center center no-repeat;
+  background-size: contain;
+  background-blend-mode: difference;
+
+  z-index: 1;
+}
+
 .avatar,
 .icon {
 
