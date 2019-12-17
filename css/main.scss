@@ -224,10 +224,10 @@ html, body {
 
   cursor: default;
 
-  background-color: blue;
+  background-color: #00F;
   color: white;
 
-  animation: morph 20s linear 3s infinite;
+  //animation: morph 20s linear 3s infinite;
 }
 
 @keyframes morph {
@@ -463,21 +463,43 @@ code {
 }
 
 .d-2020  {
-  position: fixed;
-
-  top: 10%;
-  left: 10%;
-
   width: 80%;
 
   height: 80%;
   max-height: 600px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   background: url('/img/2020.png') center center no-repeat;
   background-size: contain;
   //background-blend-mode: difference;
 
   z-index: 1;
+}
+
+.txt {
+  width: 100%;
+  height: auto;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 99;
+
+  color: #ac9e6e;
+  text-align: center;
+
+  font-size: 3em;
+  vertical-align: center;
+  mix-blend-mode: difference;
+
+  user-select: none;
+  pointer-events: none;
 }
 
 .avatar,
