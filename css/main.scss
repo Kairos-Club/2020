@@ -14,8 +14,6 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
-
-  background-color: deepskyblue;
 }
 
 /*
@@ -212,7 +210,8 @@ textarea {
 
 html, body {
 
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'slurpetteregular', Arial, Helvetica, sans-serif;
+  font-weight: normal !important;
 
   width: 100%;
   min-width: 100%;
@@ -225,8 +224,17 @@ html, body {
 
   cursor: default;
 
-  //background-color: black;
-  //color: white;
+  background-color: blue;
+  color: white;
+
+  animation: morph 20s linear 1s infinite;
+}
+
+@keyframes morph {
+  0% { background-color: #00F; }
+  25% { background-color: #F00; }
+  50% { background-color: #0F0; }
+  100% { background-color: #00F; }
 }
 
 .content {
@@ -240,6 +248,7 @@ h1 {
   font-weight: normal !important;
   font-size: 30px;
   line-height: 30px;
+  margin: 0;
 }
 
 a {
@@ -438,22 +447,58 @@ code {
 }
 
 
-.icon {
+.main {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
   z-index: 9;
+}
+
+.avatar,
+.icon {
   //animation:rball 3s infinite ease-in-out;
-  font-size: 150px;
-  top: 40%;
-  left: 45%;
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  text-align: center;
+
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
+
+  img {
+    width: 60px;
+  }
+
+  p {
+    margin: 4px 0 0 0;
+    font-weight: bold;
+
+    font-size: 1em;
+    line-height: 1em;
+  }
+}
+
+.avatar {
+  img {
+    //width: 60px;
+  }
+}
+
+.up {
+  animation:up .5s ease-in-out;
 }
 
 
-
-@-webkit-keyframes rball{
-  0%,100%{
-    transform: scale(1)
+@-webkit-keyframes up{
+  0%{
+    opacity: 0;
   }
-  50%{
-    transform: scale(1.1)
+  100%{
+    opacity: 1;
   }
 }
 
