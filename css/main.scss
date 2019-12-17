@@ -227,7 +227,7 @@ html, body {
   background-color: #00F;
   color: white;
 
-  //animation: morph 20s linear 3s infinite;
+  animation: morph 20s linear 3s infinite;
 }
 
 @keyframes morph {
@@ -489,7 +489,7 @@ code {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  z-index: 99;
+  z-index: 5;
 
   color: #ac9e6e;
   text-align: center;
