@@ -1,11 +1,4 @@
-
-
-
-
-
-
 zIndex = 100;
-
 $('.pep').pep({
     useCSSTranslation: false,
     constrainTo: '.main',
@@ -15,9 +8,6 @@ $('.pep').pep({
     }
 });
 
-
-
-
 $( '.icon, .avatar' ).each(function( index ) {
     $(this).css({
         left : Math.random() * ($('.main').width() - $(this).width()),
@@ -25,14 +15,11 @@ $( '.icon, .avatar' ).each(function( index ) {
     }).addClass('up');
 });
 
-
 $(window).resize(function(){
-
     $( '.icon, .avatar' ).each(function( index ) {
         $(this).css({
             left : Math.random() * ($('.main').width() - $(this).width()),
             top : Math.random() * ($('.main').height() - $(this).height())
         }).addClass('up');
     });
-
 });
