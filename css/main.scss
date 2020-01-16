@@ -502,6 +502,7 @@ code {
   pointer-events: none;
 }
 
+
 .avatar,
 .icon {
 
@@ -525,7 +526,6 @@ code {
 
   img {
     width: 60px;
-    height: 60px;
   }
 
   a {
@@ -539,11 +539,9 @@ code {
     font-size: 1em;
     line-height: 1em;
   }
-}
-
-.avatar {
-  img {
-    //width: 60px;
+  a:hover {
+    text-decoration: underline;
+    cursor: pointer;
   }
 }
 
@@ -556,7 +554,7 @@ code {
 
 @-webkit-keyframes up{
   0%{
-    opacity: 0;
+      opacity: 0;
   }
   100%{
     opacity: 1;
